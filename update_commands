@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ ! -w "/bin" ]; then
+  echo "You do not have permission to write to /bin. Please run the script with elevated privileges (e.g., sudo)."
+  exit 1
+fi
+
+find /home/pablo/commands/ -type f -name "*.sh" -exec sudo cp {} /bin/ \;
+
+for script in /bin/*.sh; do
+  sudo chmod +x "$script"
+  script_name=$(basename "$script" .sh)
+  sudo mv "$script" "/bin/$script_name"
+done
+
+echo "Scripts have been copied and made executable as commands in /bin/"
