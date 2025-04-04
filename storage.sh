@@ -1,3 +1,3 @@
 #!/bin/bash
 
-df -h | grep /home
+df -h | grep /sda2

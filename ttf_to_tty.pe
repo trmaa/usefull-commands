@@ -1,0 +1,5 @@
+Open("/usr/share/fonts/clacon2.ttf")
+SelectAll()
+ScaleToEm(1024)
+Generate("/usr/share/consolefonts/ccn.psf")
+Quit()
