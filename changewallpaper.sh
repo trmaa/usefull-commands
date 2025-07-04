@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-match=$(find ~/wallpapers/ -type f -iname "*$1*.jpg" | head -n 1)
+match=$(find ~/wallpapers/ -type f -iname "*$1.jpg" | head -n 1)
 
 if [ -z "$match" ]; then
     echo "No matching .jpg file found for '$1' in ~/wallpapers"
