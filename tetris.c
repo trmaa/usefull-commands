@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
@@ -134,7 +133,7 @@ void PrintTable(){
     clear();
     for(i = 0; i < ROWS ;i++){
         for(j = 0; j < COLS ; j++){
-            printw("%c ", (Table[i][j] + Buffer[i][j])? '0': '.');
+            printw("%c ", (Table[i][j] + Buffer[i][j])? '#': '.');
         }
         printw("\n");
     }
