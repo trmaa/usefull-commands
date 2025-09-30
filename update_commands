@@ -5,7 +5,7 @@ if [ ! -w "/bin" ]; then
   exit 1
 fi
 
-find /home/pablo/usefull-commands/ -type f -name "*.sh" -exec sudo cp {} /bin/ \;
+find /root/git_stuff/usefull-commands/ -type f -name "*.sh" -exec sudo cp {} /bin/ \;
 
 for script in /bin/*.sh; do
   sudo chmod +x "$script"
